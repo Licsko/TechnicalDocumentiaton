@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Technical Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>Quiz APP Dokumentáció</h1>
+        </header>
+        <ul>
+            <li>
+                <a href="#bevezetes">Bevezetés</a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="#hogyan_alljunk_neki">
+                            Hogyan álljunk neki?
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tervezes">
+                            Tervezés
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#mi_kell_ehhez">
+                            Mi kell nekünk ehhez?
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Kódolás
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="">HTML</a>
+                    </li>
+                    <li>
+                        <a href="">CSS</a>
+                    </li>
+                    <li>
+                        <a href="">JavaScript</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <header>
+            <h1>Quiz APP Dokumentáció</h1>
+        </header>
+        <section class="main-section" id="bevezetes">
+            <header>
+                <h2>Bevezetés!</h2>
+            </header>
+            <div class="szakasz">
+                <p>
+                    Ezen az oldalon szeretném Nektek bemutatni a <strong><em>Quiz APP</em></strong>-omnak a
+                    dokumentációját. Nos,
+                    habár ez nem is
+                    teljesen dokumentáció, de valahogy megpróbálom átverni a rendszert. Ezt most csak azért is írtam,
+                    hogy
+                    bő legyen a tartalom, és legyen mit olvasnia a tisztelt Látogatónak.
+                </p>
+                <p>
+                    Itt bővebb leírást adok arról miként, és hogyan készítettem el ezt az applikációmat. Rengeteg időt
+                    szenvedtem
+                    vele, hiszen egyszerűnek tűnik, de mégsem tűnik annak. Az applikációt <em>Florin Pop</em> videója
+                    alapján kezdtem el.
+                    Először megnéztem a videót, utána meg én álltam neki megcsinálni. Miközben néztem <em>Florin</em>
+                    videóját
+                    arra lettem figyelmes, hogy az ő verziója nem egy dinamikus app. Mit is értek ezalatt?
+                </p>
+                <p>
+                    Hát először is azt, hogy <em>Florin Pop</em>-féle verzióban minden kérdésnél, csak négy lehetséges
+                    válasz van.
+                    Ami szép, és jó, DEEE... <br>
+                    Mi van abban az esetben ha minden egyes kérdésnél változó számú lehetséges válaszunk lehet? Na itt
+                    kezdtett érdekes lenni a dolog.
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="hogyan_alljunk_neki">
+            <header>
+                <h3>Hogyan álljunk neki?</h3>
+            </header>
+            <div class="szakasz">
+                <p>
+                    Ami fontos egy program készítésénél az az, hogy először tervezzük meg. Gondoljuk át mi szükséges
+                    hozzá, hogy épülhet fel, milyen részekből állhat össze. Gondolok itt olyan például, hogy minden
+                    programnak van egy kinézete. Egy ilyen programot két fő részre oszthatjuk:
+                <ul>
+                    <li>az egyik maga a <strong>KÉRDÉS</strong></li>
+                    <li>a másik meg a lehetséges <strong>VÁLASZOK</strong></li>
+                </ul>
+                </p>
+                <p>
+                    Ez csak egy példa volt, hogy nagyjából lássuk a dolgok menetét. De amit olvastál az imént, az csak a
+                    jéghegy csúcsa. Ettől is olyan szép a programozás. Most be fogom Neked mutatni, hogyan tervezz meg
+                    egy ilyen programot, és mi kellhet Nekünk ennek a megvalósításához.
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="tervezes">
+            <header>
+                <h3>Tervezés</h3>
+            </header>
+            <div class="szakasz">
+                <p>
+                    Ez az első, és a legfontosabb része a programozásnak. Tervezéssel vázoljuk fel a munka menetét,
+                    ezáltal nagy segítsgünkre lesz az app-unk leprogramozásában. Na de most, miből állhat össze egy
+                    Quiz alkalmazás?
+                <ol class="upper-alpha">
+                    <li>Látványvilág</li>
+                    <ol class="lower-alpha">
+                        <li>Színvilág</li>
+                        <li>Tipográfia</li>
+                        <li>Megjelenés (a mi esetünkben kártyás megjelenés)</li>
+                    </ol>
+                    <li>Részekre bontás</li>
+                    <p>
+                        Ahogy a fenti szekcióban is írtam példaként, hogy egy Quiz alkalmazás <u><em>2 fő részből is
+                                állhat:</em></u>
+                    <ol class="lower-alpha">
+                        <li><strong>Kérdés</strong></li>
+                        <li>és lehetséges <strong>Válaszok</strong></li>
+                    </ol>
+                    <li>Funkciók</li>
+                    <ol class="lower-alpha">
+                        <li>Minden körülmények között mutassa meg a <strong>helyes választ</strong></li>
+                        <li>A quiz végén legyen egy <strong>kiértékelés</strong></li>
+                    </ol>
+                    <p>
+                        És ami feltétlenül kell nekünk ehhez, az egy...
+                    </p>
+                    <li>Adatstruktúra</li>
+                    <ol class="lower-alpha">
+                        <li>Ami áll magából a <strong>kérdésből</strong></li>
+                        <li>A lehetséges <strong>válaszokból</strong></li>
+                        <li>Valamint, a <strong>helyes válasz betűjeléből</strong></li>
+                    </ol>
+                </ol>
+                </p>
+
+                <p>
+                    Lent látható egy kódrészlet az egyik kérdés Adatstruktúrájáról, amit egy tömb-objektummal
+                    készítettem. Ezzel
+                    kezdtem a JavaScript fájlom megírását.
+                </p>
+                <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
+                    <code>
+                        const quiz = [<br>
+                        <span class="behuzas"></span>{<br>
+                            <span class="behuzas"></span><span class="behuzas"></span>kerdes: "Hány betűből áll a legrövidebb helyes válasz erre a kérdésre?",<br>
+                            <span class="behuzas"></span><span class="behuzas"></span>a: "3-ból",<br>
+                            <span class="behuzas"></span><span class="behuzas"></span>b: "8-ból",<br>
+                            <span class="behuzas"></span><span class="behuzas"></span>c: "1-ből",<br>
+                            <span class="behuzas"></span><span class="behuzas"></span>d: "5-ből",<br>
+                            <span class="behuzas"></span><span class="behuzas"></span>helyes: "d",<br>
+                            <span class="behuzas"></span>}  <br>
+                        ];<br>
+                    </code>
+                </p>
+
+                <!--  HTMLL-KÓD SABLON
+                <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
+                    <code>
+                        &lt;body&gt;<br>
+                        <span class="behuzas"></span>&lt;div class=&quot;quiz-container&quot;&gt;<br>
+                        <span class="behuzas"><span class="behuzas"></span>&lt;h2&gt;Kérdés szövege&lt;/h2&gt;<br>
+                        <span class="behuzas"><span class="behuzas"></span>&lt;ul&gt;<br>
+                        <br>
+                        <span class="behuzas"><span class="behuzas"></span>&lt;/ul&gt;<br>
+                        <span class="behuzas"><span class="behuzas"></span>&lt;button&gt;KÜLDÉS&lt;/button&gt;<br>
+                        <span class="behuzas"><span class="behuzas"></span>&lt;button style=&quot;background-color: green;&quot; class=&quot;hide&quot; onclick=&quot;kerdesBetoltese()&quot;&gt;Következő&lt;/button&gt;<br>
+                        <span class="behuzas"></span>&lt;/div&gt;<br>
+                        &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;<br>
+                        &lt;/body&gt;
+                    </code>
+                </p> 
+            -->
+
+
+                <!-- <img src="img/1.png" alt=""> -->
+            </div>
+        </section>
+        <section class="main-section" id="mi_kell_ehhez">
+            <header>
+                <h3>Mi kell nekünk ehhez?</h3>
+            </header>
+            <div class="szakasz">
+                <p>
+                    Először is le kell töltenünk, majd telepítenünk a Microsoft Visual Studio Code nevezetű
+                    kódszerkesztőjét, amit <a href="https://code.visualstudio.com/" target="_blank">ide kattintva</a> be
+                    is szerezheted.
+                </p>
+                <figure>
+                    <img src="https://code.visualstudio.com/assets/home/home-screenshot-win-lg.png"
+                        alt="A Visual Studio Code kinézete">
+                    <figcaption>A Visual Studio Code kinézete.</figcaption>
+                </figure>
+                <p>
+                    Ezt inkább <strong>IDE</strong> <em>(Integrated Development Environment)</em>-nek, azaz
+                    <em>Intergrált Fejlesztői Környezet</em>nek
+                    nevezzük, ami olyan szoftveralkalmazás, amely átfogó létesítményeket biztosít a számítógépes
+                    programozók számára a szoftverfejlesztéshez. Az IDE általában legalább egy forráskódszerkesztőből,
+                    automatizálási eszközökből és hibakeresőből áll. Tartalmazhatnak fordítókat, értelmezőket, vagy a
+                    kettő kombinációját. Az integrált fejlesztői környezetnek alapvető szerepe van a gyors
+                    alkalmazásfejlesztésben. A Visual Studio Code működik <strong>WINDOWS, macOS,</strong> és
+                    <strong>Linux</strong> operációs rendszereken is.
+                </p>
+            </div>
+            <div class="szakasz">
+                <p>
+                    Továbbá szükségünk van verziókezelésre is, ehhez le kell töltenünk, a <em><strong>GIT</strong>
+                        verziókezelő rendszert</em>, amit <a href="http://git-scm.com/" target="_blank">ezen az
+                        oldalon</a> fogsz megtalálni. Ehhez még regisztrálnunk kell a <a href="https://github.com/"
+                        target="_blank"><strong>GitHub</strong></a>-ra is. De a verziókezelésről most nem fogok írni,
+                    csak a végén majd azt, hogyan publikálhatjuk a GitHub-on.
+                </p>
+            </div>
+            <div class="szakasz">
+                <p>
+                    És akkor el is érkeztünk az izgalmas részéhez a dolgoknak, így hát kezdjük el felépíteni a mi
+                    csodálatos kis programunkat. Mint ahogy azt mondtam, HTML, CSS, és JavaScript-tel fogjuk írni az
+                    alkalmazásunkat.
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="kodolas">
+            <header>
+                <h2>Kódolás</h2>
+            </header>
+            <header>
+                <h3 id="html">HTML</h3>
+            </header>
+            <div class="szakasz">
+                <p>
+                    A HTML váza a programunknak egyátalán nem lesz bonyolult felépítésű, hiszen majd a
+                    JavaScript-tel tesszük majd dinamikussá. Na de, milyen szempontokat kell figyelembe vennünk a
+                    HTML-struktúra felépítése során?
+                </p>
+                <p>
+                    Először is, mivel magyar nyelvű lesz a mi kis Quiz App-unk, fontos, hogy a dokumentumunk magyar
+                    nyelvűre kell állítani.
+                    Miután létrehoztuk a HTML5-ös DOCTYPE!-ot, csak simán létre kell hoznunk egy HTML elemet, azzal
+                    a különbséggel, hogy a nyitó tag-be beírjuk a lang attribútumot, majd értéknek megadjuk
+                    idézőjelek között a nyelv szabványos rövidítését a hu-t. Így fog festeni a kódunk:
+                </p>
+
+                <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
+                    <code>
+                            &lt;DOCTYPE! html&gt;<br>
+                            &lt;html lang=&quot;hu&quot;&gt;<br><br>
+                            &lt;/html&gt;<br>
+                    </code>
+                </p>
+
+                <p>
+                    Miután ezt létrehoztuk, meg kell adnunk különböző fejléc adatokat a böngészők számára. Ehhez létre
+                    kell hoznuink egy head elemet, a html elemen belül.
+                </p>
+
+                <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
+                    <code>
+                            &lt;html lang=&quot;hu&quot;&gt;<br>
+                            &lt;head&gt;<br>
+                            <br>
+                            &lt;/head&gt;<br>
+                            &lt;/html&gt;<br>
+                    </code>
+                </p>
+
+                <p>
+                    A head elemen belül létre kell hoznunk meta elemeket. Sok fajta meta elem létezik.
+                <ul>
+                    <li>amiben Karakter kódolást adunk meg.</li>
+                    <small>Ez a mi esetünkben az UTF-8-as karakter kódolás lesz</small>
+                    <li>beleírhatjuk, hogy régebbi IE böngészőben is fusson</li>
+                    <small>Ez manapság már elhanyagolható. SZERINTEM! xD</small>
+                    <li>megadhatjuk az oldalunk leírását</li>
+                    <li>a kulcsszavait</li>
+                    <li>a szerzőjét</li>
+                    <li>és a viewport-ot, hogy reszponzív legyen minden eszközön</li>
+                </ul>
+                Valamint egy title elemet. Ez fogja megjeleníteni a címsorban, az oldalunk címét.
+                </p>
+
+                <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
+                    <code>
+                            &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+                            &lt;meta http-equiv=&quot;X-UA-Compatible&quot;&gt;<br>
+                            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+                            &lt;meta name=&quot;author&quot; content=&quot;Sandor Varga&quot;&gt;<br>
+                            &lt;title&gt;Quiz App&lt;/title&gt;<br>
+                    </code>
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="js/code.js"></script> -->
+</body>
+
+</html>
