@@ -85,7 +85,10 @@
                     Hát először is azt, hogy <em>Florin Pop</em>-féle verzióban minden kérdésnél, csak négy lehetséges
                     válasz van.
                     Ami szép, és jó, DEEE... <br>
-                    Mi van abban az esetben ha minden egyes kérdésnél változó számú lehetséges válaszunk lehet? Na itt
+                    Mivel mindig túl gondolom a dolgokat, illetve tovább gondolok dolgokat <em>(ami szerintem egy
+                        programozónak kell is)</em>, belegondoltam abba, mi van abban az esetben ha minden egyes
+                    kérdésnél
+                    változó számú lehetséges válaszunk lehet? Na itt
                     kezdtett érdekes lenni a dolog.
                 </p>
             </div>
@@ -98,7 +101,7 @@
                 <p>
                     Ami fontos egy program készítésénél az az, hogy először tervezzük meg. Gondoljuk át mi szükséges
                     hozzá, hogy épülhet fel, milyen részekből állhat össze. Gondolok itt olyan például, hogy minden
-                    programnak van egy kinézete. Egy ilyen programot két fő részre oszthatjuk:
+                    programnak van egy kinézete. Egy ilyen quiz programot két fő részre oszthatjuk:
                 <ul>
                     <li>az egyik maga a <strong>KÉRDÉS</strong></li>
                     <li>a másik meg a lehetséges <strong>VÁLASZOK</strong></li>
@@ -153,7 +156,7 @@
                 </p>
 
                 <p>
-                    Lent látható egy kódrészlet az egyik kérdés Adatstruktúrájáról, amit egy tömb-objektummal
+                    Lent látható egy kódrészlet az egyik kérdés Adatstruktúrájáról, amit egy <em>tömb-objektummal</em>
                     készítettem. Ezzel
                     kezdtem a JavaScript fájlom megírását.
                 </p>
@@ -170,6 +173,11 @@
                             <span class="behuzas"></span>}  <br>
                         ];<br>
                     </code>
+                </p>
+
+                <p>
+                    De még ne merüljünk bele ilyen dolgokba, hisz nem célom senkit sem összezavarni. A folytatásban
+                    megnézzük, hogy mi szükséges nekünk egy ilyen Quiz App leprogramozásához.
                 </p>
 
                 <!--  HTMLL-KÓD SABLON
@@ -253,8 +261,10 @@
                 <p>
                     Először is, mivel magyar nyelvű lesz a mi kis Quiz App-unk, fontos, hogy a dokumentumunk magyar
                     nyelvűre kell állítani.
-                    Miután létrehoztuk a HTML5-ös DOCTYPE!-ot, csak simán létre kell hoznunk egy HTML elemet, azzal
-                    a különbséggel, hogy a nyitó tag-be beírjuk a lang attribútumot, majd értéknek megadjuk
+                    Miután létrehoztuk a HTML5-ös <strong><em>DOCTYPE!</em></strong>-ot, csak simán létre kell hoznunk
+                    egy <em><strong>HTML</strong> elemet</em>, azzal
+                    a különbséggel, hogy a nyitó tag-be beírjuk a <u><strong>lang </strong>attribútumot</u>, majd
+                    értéknek megadjuk
                     idézőjelek között a nyelv szabványos rövidítését a hu-t. Így fog festeni a kódunk:
                 </p>
 
@@ -268,7 +278,7 @@
 
                 <p>
                     Miután ezt létrehoztuk, meg kell adnunk különböző fejléc adatokat a böngészők számára. Ehhez létre
-                    kell hoznuink egy head elemet, a html elemen belül.
+                    kell hoznunk egy <em><strong>head </strong> elemet</em>, a <u>html elemen belül</u>.
                 </p>
 
                 <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
@@ -282,18 +292,21 @@
                 </p>
 
                 <p>
-                    A head elemen belül létre kell hoznunk meta elemeket. Sok fajta meta elem létezik.
+                    A <u>head elemen belül</u> létre kell hoznunk <em><strong>Meta</strong> elemeket</em>. Sok fajta
+                    <em>meta elem</em>
+                    létezik.
                 <ul>
-                    <li>amiben Karakter kódolást adunk meg.</li>
+                    <li>amiben <strong>Karakter kódolást</strong> adunk meg.</li>
                     <small>Ez a mi esetünkben az UTF-8-as karakter kódolás lesz</small>
                     <li>beleírhatjuk, hogy régebbi IE böngészőben is fusson</li>
                     <small>Ez manapság már elhanyagolható. SZERINTEM! xD</small>
-                    <li>megadhatjuk az oldalunk leírását</li>
-                    <li>a kulcsszavait</li>
-                    <li>a szerzőjét</li>
-                    <li>és a viewport-ot, hogy reszponzív legyen minden eszközön</li>
+                    <li>megadhatjuk az oldalunk <strong>leírását</strong></li>
+                    <li>a <strong>kulcsszavait</strong></li>
+                    <li>a <strong>szerzőjét</strong></li>
+                    <li>és a <strong>viewport</strong>-ot, hogy reszponzív legyen minden eszközön</li>
                 </ul>
-                Valamint egy title elemet. Ez fogja megjeleníteni a címsorban, az oldalunk címét.
+                Valamint egy <em><strong>title</strong> elemet</em>. Ez fogja megjeleníteni a címsorban, az oldalunk
+                címét.
                 </p>
 
                 <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
