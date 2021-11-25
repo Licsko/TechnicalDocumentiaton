@@ -306,17 +306,85 @@
                     <li>és a <strong>viewport</strong>-ot, hogy reszponzív legyen minden eszközön</li>
                 </ul>
                 Valamint egy <em><strong>title</strong> elemet</em>. Ez fogja megjeleníteni a címsorban, az oldalunk
-                címét.
+                címét. Most jelen esetben a Karakter kódolást, a kompatibilitást, az eszközméretet, a szerzőt, és a
+                title elemet írjuk a head elembe. <br>
+                Ha ezzel megvagyunk, a <u>head elemenbelül</u> így fog kinézni a kódunk:
                 </p>
 
                 <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
                     <code>
-                            &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
-                            &lt;meta http-equiv=&quot;X-UA-Compatible&quot;&gt;<br>
-                            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
-                            &lt;meta name=&quot;author&quot; content=&quot;Sandor Varga&quot;&gt;<br>
-                            &lt;title&gt;Quiz App&lt;/title&gt;<br>
+                        &lt;head&gt;<br>
+                            <span class="behuzas"></span>&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;meta http-equiv=&quot;X-UA-Compatible&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;meta name=&quot;author&quot; content=&quot;Sandor Varga&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;title&gt;Quiz App&lt;/title&gt;<br>
+                        &lt;/head&gt;
                     </code>
+                </p>
+            </div>
+            <div class="szakasz">
+                <p>
+                    Most viszont magát a dokumentumot kell létrehoznunk. Mivel a HTML-nek van fej része (head), akkor
+                    van egy úgynevezett teste, azaz <em><strong>body</strong> eleme</em>. Ez jeleníti meg az oldalunk
+                    tartalmát, és elemeit. Ezt a <u>head elem után</u> kell tennünk. Tehát a HTML-kódunk a
+                    következőképpen fog festeni:
+                </p>
+
+                <p class="has-line-data lch-codes" data-line-start="0" data-line-end="12">
+                    <code>
+                        &lt;DOCTYPE! html&gt;<br>
+                        &lt;html lang=&quot;hu&quot;&gt;<br>
+                        &lt;head&gt;<br>
+                            <span class="behuzas"></span>&lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;meta http-equiv=&quot;X-UA-Compatible&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;meta name=&quot;author&quot; content=&quot;Sandor Varga&quot;&gt;<br>
+                            <span class="behuzas"></span>&lt;title&gt;Quiz App&lt;/title&gt;<br>
+                        &lt;/head&gt;<br><br>
+                        <b>&lt;body&gt;</b><br><br>
+                        <b>&lt;/body&gt;</b><br>
+                        &lt;/html&gt;
+                    </code>
+                </p>
+
+                <p>
+                    Most pedig a body elemünket felpopuláljuk további elemekkel. Mi is kell nekünk ehhez? Egy Quiz App
+                    létrehozásához szükségünk van:
+                <ol class="lower-alpha">
+                    <li>egy <strong>h1-es</strong> címsorra, ami a dokumentumunk lefőbb mondanivalóját sugalja.
+                        <br>
+                        <small>pl.: Quiz App</small>
+                    </li>
+                    <li>
+                        Aztán kell egy dobozunk, vagyis egy <strong>div</strong> elemünk, ami majd egy kártya hatását
+                        kelti. Ehhez hozzá kell adnunk egy osztályt, hogy a CSS-ben létrehozzhassuk a kártya formát.
+                    </li>
+                    <li>
+                        A kártyán belül kell majd egy <strong>h2-es</strong> címsor, ahol majd maga a kérdés fog
+                        megjelnni. <br>
+                        <small>Jelen esetben, ehhez nem adunk tartalmat, mert majd a JavaScript-tel dinamikussá fogjuk
+                            tenni.</small>
+                    </li>
+                    <li>
+                        A kártyán belül szükségünk lesz egy számozatlan lista elemre, azaz egy <strong>ul</strong>
+                        elemre, ahol a lehetséges válaszokat fogjuk majd kilistázni. <br>
+                        <small>Amhez szintén nem adunk hozzá tartalmat, mert ezt is a JavaScript-tel fogjuk dinamikussá
+                            tenni.</small>
+                    </li>
+                    <li>És nem utolsó sorban szükségünk lesz <strong>2 (azaz kettő)</strong> darab gombra, azaz
+                        <strong>button</strong> elemre. Az egyik egy KÜLDÉS gomb lesz, a másik pedig egy KÖVETKEZŐ gomb.
+                        <br>
+                        <small>Mindkét gomb funkcióját leprogramozzuk majd JavaScript-tel, de a második gombunkat, el
+                            kell hogy rejtsük egy bizonyos időre, ezért hozzá kell majd adnunk egy <strong>hide</strong>
+                            osztályt.</small>
+                    </li>
+                </ol>
+                </p>
+
+                <p>
+                    Álljunk is neki a kódunk felépítésének. Ugyebár a body elemet létrehoztuk. Készítsünk egy
+                    <em><strong>h1</strong>-es címsort</em> <strong>Quiz App</strong> felírattal.
                 </p>
             </div>
         </section>

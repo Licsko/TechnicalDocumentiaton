@@ -107,6 +107,7 @@ section {
 }
 
 .szakasz {
+    margin-bottom: 5rem;
     padding: 0 5rem 0 2rem;
     text-align: justify;
     line-height: 1.8;
@@ -185,7 +186,7 @@ figcaption {
 }
 
 .main-section img {
-    width: 90%;
+    max-width: 90%;
 }
 
 small {
