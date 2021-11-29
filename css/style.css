@@ -106,22 +106,22 @@ section {
     }
 }
 
-.szakasz {
+article {
     margin-bottom: 5rem;
     padding: 0 5rem 0 2rem;
     text-align: justify;
     line-height: 1.8;
 }
 @media (max-width: 850px) {
-    .szakasz {
+    article {
         padding: 0 1.5rem 0 1rem;
     }
 }
-.szakasz p {
+article p {
     margin-bottom: 1.5rem;
     text-indent: 2rem;
 }
-.szakasz p.lch-codes {
+article p.lch-codes {
     text-indent: 0;
     text-align: left;
 }
@@ -130,10 +130,10 @@ section {
     margin-left: 2ch;
 }
 
-.szakasz ol{
+article ol{
     text-indent: 0;
 }
-.szakasz ol p {
+article ol p {
     margin: .3rem;
 }
 .upper-alpha {
